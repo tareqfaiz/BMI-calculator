@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+       
+        #bmi-popup {
+            display: none;
+        }
+
+        #h1 {
+
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            color: rgb(229, 217, 220);
+            background-color: blueviolet;
+            margin: 20px;
+            padding: 20px;
+          
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aquamarine;
+            
+        }
+
+        .modal-content {
+            width: 400px;
+            margin: 100px auto;
+            background-color: #f9f9f9;
+            border: 1px solid #e9e9e9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-header {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        .modal-title {
+            font-size: 18px;
+        }
+
+        .modal-footer {
+            background-color: #f0f0f0;
+            border-top: 1px solid #d9d9d9;
+        }
+
+        #bmi-popup.show {
+            display: block;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        #calculate-bmi:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+    </style>
+</head>
+<body>
+  <div class="main" style="margin: 20px; padding: 10px;">
+   <div class="welcome">
+   <h1 id="heading" style="color: rgb(17, 37, 36); font-size: 3rem; font-weight: bolder; text-align: center; padding: 20px; margin: 20px;">ARE YOU CONCERNED ABOUT YOUR BMI?</h1>
+   <p style="font-size: 1.5rem; text-align: center; color: rgb(170, 21, 106);">Try our BMI calculator for FREE!</p>
+   <div class="background-image" style="align-items: center; display: flexbox; text-align: center;">
+      <img src="./heart.avif" alt="heart-picture" style="width: 50px;">
+    </div>
+   </div>
+   <div id="h1"><h1>BMI Calculator</h1></div>
+    <div class="button"><button id="calculate-bmi">Calculate BMI</button></div>
+    <div id="bmi-popup" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BMI Results</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="bmi-result"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+
+ 
+</body>
+</html>
